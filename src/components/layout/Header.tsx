@@ -1,7 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import HeaderSearchForm from './HeaderSearchForm';
+import HeaderTapMenu from './HeaderTapMenu';
 
 const Header = () => {
-  return <div>Header</div>;
+  return (
+    <header className="flex flex-col bg-white shadow-sm">
+      <div className="flex items-center justify-between px-4 py-3">
+        <h1 className="font-bold text-xl text-black">
+          <Link to="/" className="flex items-center">
+            가전나라<span className="text-sm ml-0.5 text-primary">⚡</span>
+          </Link>
+        </h1>
+
+        <HeaderSearchForm />
+      </div>
+
+      <HeaderTapMenu />
+    </header>
+  );
 };
 
 export default Header;

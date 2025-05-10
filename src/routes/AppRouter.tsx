@@ -6,6 +6,7 @@ import ProductsDetail from '@/pages/ProductsDetail';
 import ProductsList from '@/pages/ProductsList';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NotFound from '@/pages/NotFound';
+import SearchPage from '@/components/SearchPage';
 
 const AppRouter = () => {
   return (
@@ -16,6 +17,7 @@ const AppRouter = () => {
           <Route path="/products" element={<ProductsList />} />
           <Route path="/products/:id" element={<ProductsDetail />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/search" element={<SearchPage />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
