@@ -6,19 +6,17 @@ import 'swiper/css';
 
 const Banner = () => {
   const swiperParams: SwiperOptions = {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    loop: true,
-    speed: 300,
-
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-
-    pagination: {
-      clickable: true,
-    },
+    // slidesPerView: 1,
+    // spaceBetween: 0,
+    // loop: false,
+    // speed: 300,
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
+    // pagination: {
+    //   clickable: true,
+    // },
   };
 
   return (
