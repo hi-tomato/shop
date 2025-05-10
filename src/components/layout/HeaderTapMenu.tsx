@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const HeaderTapMenu = () => {
   return (
-    <div>
+    <div className="shadow-sm">
       <ul className="flex px-4">
         <li className="mr-6 py-3 relative group">
           <Link to="/" className="block px-1 text-[#1A56F1] font-medium">
