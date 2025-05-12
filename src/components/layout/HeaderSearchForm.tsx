@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const HeaderSearchForm = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const debouncedQuery = useDebounce(searchQuery, 500);
+  const debouncedQuery = useDebounce(searchQuery, 300);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,10 +17,10 @@ const HeaderSearchForm = () => {
     e.preventDefault();
     if (searchQuery.trim().length === 0) {
       return;
-    } else if (searchQuery.trim()) {
-      navigate(`/search?query=${encodeURIComponent(searchQuery)}`);
-      setSearchQuery('');
     }
+    console.log('입력한 키워드로 경로가 이동된다.');
+    navigate(`/search?query=${searchQuery}`);
+    setSearchQuery('');
   };
 
   return (
