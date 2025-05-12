@@ -7,21 +7,25 @@ import ProductsList from '@/pages/ProductsList';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NotFound from '@/pages/NotFound';
 import SearchPage from '@/components/SearchPage';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
+const queryClient = new QueryClient();
 const AppRouter = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/products" element={<ProductsList />} />
-          <Route path="/products/:id" element={<ProductsDetail />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/products" element={<ProductsList />} />
+            <Route path="/products/:id" element={<ProductsDetail />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 };
 

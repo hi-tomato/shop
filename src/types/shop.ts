@@ -1,4 +1,3 @@
-// API 응답 타입
 export interface NaverShopItem {
   title: string; // 상품명
   link: string; // 상품 URL
