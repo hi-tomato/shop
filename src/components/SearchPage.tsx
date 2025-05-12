@@ -13,8 +13,8 @@ const fetchNaverShopItems = async (
   const url = '/api/v1/search/shop.json';
   const options = {
     headers: {
-      'X-Naver-Client-Id': 'qZ6qnMEKv9qD2tTAwm3y',
-      'X-Naver-Client-Secret': 'PMZmsnx0ag',
+      'X-Naver-Client-Id': import.meta.env.VITE_NAVER_CLIENT_ID,
+      'X-Naver-Client-Secret': import.meta.env.VITE_NAVER_CLIENT_SECRET,
     },
     params: { query },
   };
